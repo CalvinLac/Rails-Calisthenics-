@@ -16,21 +16,21 @@ Tagging.destroy_all
 UserPost.destroy_all
 
 puts "user"
-10.times do 
+30.times do 
   u = User.new
   u.name = Faker::Name.name
   u.save
 end
 
 puts "cat"
-10.times do 
+30.times do 
   c = Category.new
   c.name = Faker::Name.name
   c.save
 end
 
 puts "post"
-10.times do 
+30.times do 
   p = Post.new
   p.title = Faker::Lorem.word
   p.body = Faker::Lorem.sentence
@@ -39,14 +39,14 @@ puts "post"
 end
 
 puts "tag"
-10.times do
+30.times do
   t = Tag.new
   t.name = Faker::Lorem.word
   t.save
 end 
 
 puts "userpost"
-10.times do 
+30.times do 
   up = UserPost.new
   up.user_id = User.all.sample.id
   up.post_id = Post.all.sample.id
@@ -54,7 +54,7 @@ puts "userpost"
 end
 
 puts "taggings"
-10.times do 
+30.times do 
   ting = Tagging.new
   ting.post_id = Post.all.sample.id
   ting.tag_id = Tag.all.sample.id
@@ -62,7 +62,7 @@ puts "taggings"
 end
 
 puts "comments"
-10.times do 
+30.times do 
   com = Comment.new 
   com.body = Faker::Lorem.sentence
   com.user_id = User.all.sample.id
